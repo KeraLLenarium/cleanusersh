@@ -18,7 +18,7 @@ if [ ! -d "$TARGET_DIR" ]; then
 fi
 
 # Снимаем атрибут immutable со всех файлов и поддиректорий
-find "$TARGET_DIR" -exec chattr -i {} \;
+find "$TARGET_DIR" -exec chattr -i {} \; 2>/dev/null
 
 # Удаляем всё содержимое директории, кроме самой директории
 find "$TARGET_DIR" -mindepth 1 -delete
