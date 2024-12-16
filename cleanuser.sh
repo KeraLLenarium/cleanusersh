@@ -34,6 +34,6 @@ echo "Содержимое юзер $USER успешно добавлено."
 chown -R $USER.$USER $TARGET_DIR
 
 # Меняем ремину
-sed -i "s|datadir_path=/mainTK/user_name|datadir_path=/mainTK/user_name/$USER|g" "$TARGET_DIR/.config/remmina/remmina.pref"
+sed -i "s|datadir_path=/mainTK/user_name|datadir_path=/mainTK/$USER|g" "$TARGET_DIR/.config/remmina/remmina.pref"
 
 echo "Имя пользователя успешно обновлено в конфигурационном файле."
